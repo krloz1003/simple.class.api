@@ -6,14 +6,6 @@ class PropertieTest extends \PHPUnit\Framework\TestCase {
 	/**
 	 * @test 
 	 */ 
-	public function probar_que_dos_mas_dos_es_cuatro() {
-		$res = 2 + 2;
-		$this->assertEquals(4, $res);
-	}
-
-	/**
-	 * @test 
-	 */ 
 	public function probamos_api_easybroker_contenga_key_content(){
 		$url = "https://api.stagingeb.com/v1/properties";
 		$headers = (array(
