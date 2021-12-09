@@ -4,7 +4,7 @@ require_once 'app/Curl.php';
 /**
  * Parametros API Easybroker
  */
-$url = "https://api.stagingeb.com/v1/properties";
+$url = "https://api.stagingeb.com/v1/propertiesl";
 $headers = (array(
     'X-Authorization: l7u502p8v46ba3ppgvj5y2aad50lb9'
 ));
@@ -21,13 +21,8 @@ $res = $api->response();
 /**
  * Si RES contiene información y trae el key CONTENT
  * filtra los datos de la columna title,
- * Si contiene un key ERROR, retornamos el array de error
- * Si RES es null  mostramos un arreglo vacío.
+ * si no retorna el valor de la variable RES
  */
-$filter = ($res && array_key_exists('content', $res) 
-            ? array_column($res['content'], 'title') 
-            : (array_key_exists('error', $res)) )
-                ? $res
-                : [] ;
+ $filter = ($res && array_key_exists('content', $res))? array_column($res['content'], 'title') : $res;
 
 var_dump($filter);
