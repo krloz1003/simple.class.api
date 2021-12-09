@@ -6,7 +6,7 @@ require_once 'app/Curl.php';
  */
 $url = "https://api.stagingeb.com/v1/properties";
 $headers = (array(
-    'X-Authorization: l7u502p8v46ba3ppgvj5y2aad50lb9-'
+    'X-Authorization: l7u502p8v46ba3ppgvj5y2aad50lb9'
 ));
 
 /**
